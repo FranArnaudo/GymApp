@@ -43,6 +43,25 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-GymApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GymApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = GymApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-GymApp-GymAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymApp-GymAppTests.release.xcconfig"; path = "Target Support Files/Pods-GymApp-GymAppTests/Pods-GymApp-GymAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		A10FF4EE2B73291900BDAFE7 /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fontisto.ttf; sourceTree = "<group>"; };
+		A10FF4EF2B73291900BDAFE7 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
+		A10FF4F02B73291900BDAFE7 /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Feather.ttf; sourceTree = "<group>"; };
+		A10FF4F12B73291900BDAFE7 /* FontAwesome6_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome6_Regular.ttf; sourceTree = "<group>"; };
+		A10FF4F22B73291900BDAFE7 /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.ttf; sourceTree = "<group>"; };
+		A10FF4F32B73291900BDAFE7 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Brands.ttf; sourceTree = "<group>"; };
+		A10FF4F42B73291900BDAFE7 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialCommunityIcons.ttf; sourceTree = "<group>"; };
+		A10FF4F52B73291900BDAFE7 /* AntDesign.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AntDesign.ttf; sourceTree = "<group>"; };
+		A10FF4F62B73291900BDAFE7 /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Foundation.ttf; sourceTree = "<group>"; };
+		A10FF4F72B73291900BDAFE7 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
+		A10FF4F82B73291900BDAFE7 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Solid.ttf; sourceTree = "<group>"; };
+		A10FF4F92B73291900BDAFE7 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Regular.ttf; sourceTree = "<group>"; };
+		A10FF4FA2B73291900BDAFE7 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		A10FF4FB2B73291900BDAFE7 /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
+		A10FF4FC2B73291900BDAFE7 /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
+		A10FF4FD2B73291900BDAFE7 /* FontAwesome6_Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome6_Solid.ttf; sourceTree = "<group>"; };
+		A10FF4FE2B73291900BDAFE7 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
+		A10FF4FF2B73291900BDAFE7 /* FontAwesome6_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome6_Brands.ttf; sourceTree = "<group>"; };
+		A10FF5002B73291900BDAFE7 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -86,6 +105,7 @@
 		13B07FAE1A68108700A75B9A /* GymApp */ = {
 			isa = PBXGroup;
 			children = (
+				A10FF4ED2B73291900BDAFE7 /* Fonts */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -135,6 +155,33 @@
 				00E356EE1AD99517003FC87E /* GymAppTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A10FF4ED2B73291900BDAFE7 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A10FF4EE2B73291900BDAFE7 /* Fontisto.ttf */,
+				A10FF4EF2B73291900BDAFE7 /* Octicons.ttf */,
+				A10FF4F02B73291900BDAFE7 /* Feather.ttf */,
+				A10FF4F12B73291900BDAFE7 /* FontAwesome6_Regular.ttf */,
+				A10FF4F22B73291900BDAFE7 /* Entypo.ttf */,
+				A10FF4F32B73291900BDAFE7 /* FontAwesome5_Brands.ttf */,
+				A10FF4F42B73291900BDAFE7 /* MaterialCommunityIcons.ttf */,
+				A10FF4F52B73291900BDAFE7 /* AntDesign.ttf */,
+				A10FF4F62B73291900BDAFE7 /* Foundation.ttf */,
+				A10FF4F72B73291900BDAFE7 /* Ionicons.ttf */,
+				A10FF4F82B73291900BDAFE7 /* FontAwesome5_Solid.ttf */,
+				A10FF4F92B73291900BDAFE7 /* FontAwesome5_Regular.ttf */,
+				A10FF4FA2B73291900BDAFE7 /* FontAwesome.ttf */,
+				A10FF4FB2B73291900BDAFE7 /* Zocial.ttf */,
+				A10FF4FC2B73291900BDAFE7 /* EvilIcons.ttf */,
+				A10FF4FD2B73291900BDAFE7 /* FontAwesome6_Solid.ttf */,
+				A10FF4FE2B73291900BDAFE7 /* SimpleLineIcons.ttf */,
+				A10FF4FF2B73291900BDAFE7 /* FontAwesome6_Brands.ttf */,
+				A10FF5002B73291900BDAFE7 /* MaterialIcons.ttf */,
+			);
+			name = Fonts;
+			path = "../node_modules/react-native-vector-icons/Fonts";
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
@@ -466,6 +513,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D83555Y8Z2;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = GymApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -493,6 +541,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D83555Y8Z2;
 				INFOPLIST_FILE = GymApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -580,10 +629,7 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -651,10 +697,7 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
