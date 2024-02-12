@@ -13,7 +13,7 @@ export type WorkoutStackParamList = {
 const Stack = createNativeStackNavigator<WorkoutStackParamList>();
 export const ExercisesContext = React.createContext<{ exercises?: Exercise[], setExercises?: React.Dispatch<React.SetStateAction<Exercise[]>> }>({ exercises: [] })
 function WorkoutNavigator() {
-  const [workout, setWorkout] = React.useState<Workout>({ exercises: [] })
+  const [workout, setWorkout] = React.useState<Workout>({ exercises: [], startTime: new Date() })
 
   const handleAddExerciseRow = (exercise: Exercise) => {
     const currentWorkout = workout
@@ -23,18 +23,12 @@ function WorkoutNavigator() {
       sets: [{
         id: generateUUID(),
         selected: false,
-        last: '',
+        last: '-',
         reps: 0,
         weight: 0,
         rir: 0
       }]
     })
-    setWorkout({ ...currentWorkout })
-  }
-  const handleSelectSet = (exerciseId: string, setId: string) => {
-    let currentWorkout = workout
-    const rowIndex = currentWorkout.exercises.findIndex((ex) => ex.id === exerciseId)
-    currentWorkout.exercises[rowIndex].sets = currentWorkout.exercises[rowIndex].sets.map((set) => set.id === setId ? { ...set, selected: !set.selected } : set)
     setWorkout({ ...currentWorkout })
   }
   const handleAddSet = (exerciseId: string) => {
@@ -43,16 +37,23 @@ function WorkoutNavigator() {
     currentWorkout.exercises[rowIndex].sets.push({
       id: generateUUID(),
       selected: false,
-      last: '',
+      last: '-',
       reps: 0,
       weight: 0,
       rir: 0
     })
     setWorkout({ ...currentWorkout })
   }
+  const handleUpdateSet = (exerciseId: string, value: Sets) => {
+    const currentWorkout = workout
+    const rowIndex = currentWorkout.exercises.findIndex((ex) => ex.id === exerciseId)
+    currentWorkout.exercises[rowIndex].sets = currentWorkout.exercises[rowIndex].sets.map(set => (
+      set.id === value.id ? value : set))
+    setWorkout({ ...currentWorkout })
+  }
   const exerciseRowFunctions = {
-    handleSelectSet,
-    handleAddSet
+    handleAddSet,
+    handleUpdateSet
   }
   const [exercises, setExercises] = React.useState<Exercise[]>([])
   return (

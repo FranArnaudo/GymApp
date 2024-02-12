@@ -39,9 +39,9 @@ const palette : ThemePalette = {
 }
 const lightModePalette : ThemePalette = {
   primary:{
-    main:'#FFFFFF',
-    light: '#C7C7C7',
-    dark:'#CCCCCC'
+    main:'#e9f5f7',
+    light: '#f5f9fa',
+    dark:'#d5f0f5'
   },
   secondary: {
     main:'#4E564F',

@@ -28,28 +28,15 @@ const HomeScreen = ({ navigation }: HomeScreenProps) => {
           <Button text={texts.createFreeWorkout} onPress={() => navigation.navigate('WorkoutNavigator')} />
           <Button text={{ es: 'Cambiar idioma', en: 'Change language' }} onPress={() => setLanguage(newLanguageToSet)} />
           <Button text={{ es: 'Cambiar tema', en: 'Change theme' }} onPress={() => setTheme(newThemeToSet)} />
-          {theme.type === 'dark' ? <Neomorph
-            // inner // <- enable inner shadow
-            // useArt // <- set this prop to use non-native shadow on ios
+          {<Neomorph
             style={{
               shadowRadius: 10,
               borderRadius: 20,
               backgroundColor: theme.palette.primary.main,
               width: 100,
               height: 100,
-              // ...include most of View/Layout styles
             }}
-          /> : <Shadow useArt style={{
-            shadowRadius: 10,
-            shadowOffset: { width: 5, height: 5 },
-            shadowOpacity: 1,
-            shadowColor: theme.palette.neutral[200],
-            borderRadius: 20,
-            backgroundColor: theme.palette.primary.main,
-            width: 100,
-            height: 100,
-            // ...include most of View/Layout styles
-          }} />}
+          />}
         </ScrollView>
       </SafeAreaView>
     </Background>

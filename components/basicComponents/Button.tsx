@@ -1,8 +1,9 @@
 import { useTheme } from "@react-navigation/native";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { StyleSheet, Text, TouchableHighlight, View } from "react-native";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import I18nText from "./I18nText/I18nText";
+import { NeomorphFlex, Shadow, ShadowFlex } from "react-native-neomorph-shadows";
 
 type ButtonProps = {
   text: I18nAble,
@@ -16,20 +17,33 @@ const Button = ({ text, onPress, Icon, iconPlacement = "pre", variant = 'primary
   const { theme } = useContext(ThemeContext);
   const styles = useStyles(theme);
   const stuckStyles = stuck === 'none' ? undefined : stuck === 'top' ? styles.stuckTop : styles.stuckBottom
-  console.log(text.en, stuckStyles)
-  return <TouchableHighlight
-    style={[
-      styles.button,
-      stuckStyles,
-      variant === 'primary' ? styles.primaryVariantBackground : styles.secondaryVariantBackground,
+  return (<NeomorphFlex
+    swapShadows // <- change zIndex of each shadow color
+    inner
+    style={{
+      shadowOffset: { width: 5, height: 5 },
+      shadowRadius: 10,
+      borderRadius: 50,
+      backgroundColor: variant === 'primary' ? theme.palette.tertiary.light : theme.palette.primary.dark,
+      width: '100%',
+      height: 40,
+      justifyContent: 'center',
+      alignContent: 'center',
+    }}
+  >
+    <TouchableHighlight
+      style={[
+        styles.button,
+        stuckStyles,
 
-    ]} onPress={onPress}>
-    <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8 }}>
-      {Icon && iconPlacement === 'pre' && Icon}
-      <I18nText text={text} style={[styles.text, variant === 'primary' ? styles.primaryVariantTextColor : styles.secondaryVariantTextColor]} />
-      {Icon && iconPlacement === 'post' && Icon}
-    </View>
-  </TouchableHighlight>;
+      ]} onPress={onPress}>
+      <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8 }}>
+        {Icon && iconPlacement === 'pre' && Icon}
+        <I18nText text={text} style={[styles.text, variant === 'primary' ? styles.primaryVariantTextColor : styles.secondaryVariantTextColor]} />
+        {Icon && iconPlacement === 'post' && Icon}
+      </View>
+    </TouchableHighlight>
+  </NeomorphFlex>)
 };
 
 const useStyles = (theme: Theme) =>
@@ -49,16 +63,11 @@ const useStyles = (theme: Theme) =>
       textAlignVertical: 'center'
     },
     primaryVariantTextColor: {
-      color: theme.palette.primary.main,
+      color: theme.type === 'dark' ? theme.palette.neutral[900] : theme.palette.neutral.A100,
+      fontWeight: '600'
     },
     secondaryVariantTextColor: {
       color: theme.palette.tertiary.main,
-    },
-    primaryVariantBackground: {
-      backgroundColor: theme.palette.tertiary.main
-    },
-    secondaryVariantBackground: {
-      backgroundColor: theme.palette.primary.dark
     },
     stuckTop: {
       borderRadius: 0,
@@ -71,4 +80,4 @@ const useStyles = (theme: Theme) =>
       borderTopRightRadius: 8,
     }
   });
-export default Button;
+export default React.memo(Button);

@@ -89,4 +89,5 @@ type Sets = {
 
 type Workout = {
   exercises: WorkoutExerciseRow[]
+  startTime: Date
 }
